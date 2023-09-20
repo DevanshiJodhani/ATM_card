@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Belanosima&family=Josefin+Sans:wght@100&family=Poppins:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+.ATM-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dad6d6;
+}
+.ATM-card{
+    width: 500px;
+    height: 330px;
+    cursor: pointer;
+    perspective: 1000px;
+
+}
+.innerSide-card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+.front_side,
+.back_side{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #1e90ff, #000080);
+    position: absolute;
+    padding: 15px 35px;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.Bank-logo{
+    display: flex;
+    justify-content: right;
+    top: 0;
+
+}
+.front_side h3{
+    margin-top: 8px;
+    display: flex;
+    justify-content: right;
+    font-size: 22px;
+}
+.front-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.front-img .chip{
+    width: 50px;
+}
+
+
+.design{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+
+.card-no{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 1px 20px;
+    margin-top: 12px;
+}
+
+.another-copy-no{
+    font-size: 17px;
+    margin-top: 5px;
+}
+.validity{
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.validity p{
+    font-size: 15px;
+}
+
+.validity span{
+    margin: 15px;
+    font-size: 18px;
+}
+.sub_logo{
+    display: flex;
+    justify-content: right;
+}
+.debit{
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+}
+
+.back_side{
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+.note-line{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10.5px;
+    color: #fff;
+}
+.black-line{
+    background: #111;
+    height: 50px;
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-top: 12px;
+}
+.cvv-part{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.cvv-part div{
+    display: flex;
+}
+.cvv-part img{
+    width: 70%;
+    display: block;
+}
+
+.cvv-part p{
+    height: 25px;
+    margin-top: 10px;
+    align-items: center;
+    background: #fff;
+    font-size: 20px;
+    color: #000;
+}
+
+.instrcution{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #dad6d6;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.sub-bank-note{
+    display: flex;
+    justify-content: right;
+    font-size: 10px;
+    margin-top: -35px;
+    margin-left: 100px;
+}
+
+.bank-note h5{
+    font-size: 12px;
+    margin-top: 7px;
+    margin-left: 100px;
+}
+
+.Last-logo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.back_side{
+    transform:  rotateY(180deg);
+
+}
+
+.ATM-card:hover .innerSide-card{
+    transform:  rotateY(-180deg);
+}
